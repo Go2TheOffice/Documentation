@@ -22,11 +22,11 @@ and then use `aptitude update` to refresh the apt cache
    `apt -t buster-backports install wireguard `
 
 ## 4. Enable packet fowarding
-    Go into `/etc/sysctl.conf` and make sure the following line is uncommented:
-    ```
-    net.ipv4.ip_forward=1
-    ```
-    Then, use `sysctl -p` to reload the file and enable packet fowarding
+Go into `/etc/sysctl.conf` and make sure the following line is uncommented:
+```
+net.ipv4.ip_forward=1
+```
+Then, use `sysctl -p` to reload the file and enable packet fowarding
 
 ## 5. Initilize LXC container
 This should be staightfoward, standard settings for the container. Remember to enable 
