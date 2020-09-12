@@ -29,7 +29,7 @@ and then use `aptitude update` to refresh the apt cache
     Then, use `sysctl -p` to reload the file and enable packet fowarding
 
 ## 5. Initilize LXC container
-    This should be staightfoward, standard settings for the container. Remember to enable 
+This should be staightfoward, standard settings for the container. Remember to enable 
 
 ## 6. Create keys in the container
 First, create a wireguard directory, and the run the following commands to create a keypair
