@@ -19,7 +19,7 @@ deb http://deb.debian.org/debian buster-backports main contrib non-free # availa
 and then use `aptitude update` to refresh the apt cache
 
 ## 3. Install wireguard
-   `apt -t buster-backports install wireguard `
+`apt -t buster-backports install wireguard `
 
 ## 4. Enable packet fowarding
 Go into `/etc/sysctl.conf` and make sure the following line is uncommented:
@@ -32,7 +32,7 @@ Then, use `sysctl -p` to reload the file and enable packet fowarding
 This should be staightfoward, standard settings for the container. Remember to enable 
 
 ## 6. Create keys in the container
-First, create a wireguard directory, and the run the following commands to create a keypair
+First, create a wireguard directory `/etc/wireguard`, and the run the following commands to create a keypair
 ```
 umask 077
 wg genkey | tee server-privatekey | wg pubkey > server-publickey
