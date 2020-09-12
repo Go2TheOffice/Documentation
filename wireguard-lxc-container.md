@@ -54,34 +54,34 @@ AllowedIPs = 192.168.2.2/32
 ```
 
 ## 8. Create a configuration for the client:
-    Call the file client.conf or something. 
-    ```
-    [Interface]
-    PrivateKey = <mobile-privatekey file contents>
-    Address = 192.168.2.2/24
-    DNS = 192.168.1.1
+Call the file client.conf or something. 
+```
+[Interface]
+PrivateKey = <mobile-privatekey file contents>
+Address = 192.168.2.2/24
+DNS = 192.168.1.1
 
-    [Peer]
-    PublicKey = <server-publickey file contents>
-    Endpoint = <server-ip>:51820
-    AllowedIPs = 0.0.0.0/0, ::/0
-    PersistentKeepalive = 25
-    ```
+[Peer]
+PublicKey = <server-publickey file contents>
+Endpoint = <server-ip>:51820
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 25
+```
 
 ## 9. Fix permissions (if needed, using chown) and enable the services.
-    ```
-    chown -R root:root /etc/wireguard
-    chmod -R og-rwx /etc/wireguard
-    systemctl enable wg-quick@wg0.service
-    systemctl start wg-quick@wg0.service
-    ```
+```
+chown -R root:root /etc/wireguard
+chmod -R og-rwx /etc/wireguard
+systemctl enable wg-quick@wg0.service
+systemctl start wg-quick@wg0.service
+```
 
 ## 10. (Optional) Display QR code for mobile iOS client
-    This looks neat, we should try it:
+This looks neat, we should try it:
 
-    ```
-    apt install qrencode
-    qrencode -t ansiutf8 < android.conf
-    ```
+```
+apt install qrencode
+qrencode -t ansiutf8 < android.conf
+```
 
-    That should show a QR code that can then be scanned by the wireguard iOS client.
+That should show a QR code that can then be scanned by the wireguard iOS client.
