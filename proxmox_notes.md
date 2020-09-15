@@ -27,3 +27,14 @@ After install, there may still be some stuff that needs to be fleshed out.
 
 ### Proxmox repositories aren't signed, apt cannot update
 Remove the Proxmox enterprise repository (`pve-enterprise`) from `/etc/apt/sources.list` or from the `/etc/apt/sources.list.d/` directory. You can't access the enterprise repo unless you pay for Proxmox. May also need to add the community repositories instead. [reference](https: //it42.cc/2019/10/14/fix-proxmox-repository-is-not-signed/)
+
+### Cannot access proxmox or other services through OpenVPN, even though other services are available
+Document this stuff:
+https://docs.netgate.com/pfsense/en/latest/virtualization/virtualizing-pfsense-with-proxmox.html#configuring-pfsense-software-to-work-with-proxmox-virtio
+
+https://docs.netgate.com/pfsense/en/latest/virtualization/virtio-driver-support.html
+
+https://pve.proxmox.com/wiki/PfSense_Guest_Notes
+
+https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=165059
+
