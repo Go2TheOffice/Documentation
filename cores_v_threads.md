@@ -3,6 +3,7 @@
 ## How do you calculate logical cores? 
 If you open windows resmon or in proxmox, you might see something like this:
 > CPU(s) 12 x AMD Ryzen 5 3600 6-Core Processor (1 Socket)
+
 This means it's a 6 core CPU on 1 socket, running 2 threads per core. Here's what that means:
 
 - The **cores** are the actual physical number of cores. To clarify, the definition of cores aren't really well defined, and are up to the manufacturer. [Wikichip](https://en.wikichip.org/wiki/physical_core) describes a core as a "well-partitioned piece of logic capable of independently performing all functions of a processor." It's essentially the number of ALUs that a CPU can address and multiplex at a time.
@@ -11,6 +12,7 @@ This means it's a 6 core CPU on 1 socket, running 2 threads per core. Here's wha
 
 ## How does SMT work
 (note: I didn't do a whole lot of research on this part, could be expanded)
+
 SMT isn't actually multiple virtialised cores sitting on a single core, even though that's how it's presented. It's more like "hardware scheduler dynamically assign threads to run on a core so that the one core can do up to theoretically N numbers of threads where N is how many threads the hardware scheduler can assign to a core at the same time." Pretty much all modern CPUs only have N=2 threads per core, but apparently AMD is working on CPUs that can do N=4.
 
 ## What do the number of logical cores tell you
