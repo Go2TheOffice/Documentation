@@ -77,7 +77,7 @@ systemctl start wg-quick@wg0.service
 ```
 
 ## 10. Install client and connect by importing configuration files
-Go to the [wireguard website](wireguard.com) and install whatever client you want. It will ask for a configuration file, which _should_ be the same file as the one created in step 8. Either use `scp` to transfer the file over, or just recreate it on the client.
+Go to the wireguard website and install whatever client you want. It will ask for a configuration file, which _should_ be the same file as the one created in step 8. Either use `scp` to transfer the file over, or just recreate it on the client.
 
 ## 11. (Optional) Display QR code for mobile iOS client
 This looks neat, we should try it:

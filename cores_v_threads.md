@@ -24,4 +24,4 @@ It depends on the CPU, application design and task at hand. On CPU level, it doe
 ## Why do hypervisors let you speificy the number of sockets?
 A lot of hypervisors, such as proxmox, VM ware ones, ESX etc let you specify the number of cores, as well as the number of sockets. So you can do things like pass 4 Cores on 1 socket, or pass 1 core per socket, but assign the VM 4 sockets. There's two reason's why you might want to do that. 
 1. Licensing and OS limitations. Some OS's don't like you passing a certain number of cores per socket, or charger per core per socket. So an OS might not like you passing a 8 core CPU, but is perfectly happy supporting dual core CPUs on 4 sockets.
-2. NUMA. 
+2. NUMA. Look into further.
