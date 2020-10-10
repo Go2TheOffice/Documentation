@@ -1,4 +1,5 @@
 # How to install Wireguard (WIP guide)
+> **NOTE:** This guide has <em>not</em> been tested. I wrote it up because I thought I had to have someone else install wireguard, but then we fixed OpenVPN.
 
 This guide was scraped together from various sources of documentation, forum posts and some dude on discord who has more experience than me
 

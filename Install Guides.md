@@ -2,7 +2,7 @@
 
 This document should contain install instructions (as well as some troubleshooting) for several services installed on the server
 
-Password for guac vm: DELETE THIS FROM THIS DOC guacamole456)
+Password for guac vm: #TODO: DELETE THIS FROM THIS DOC guacamole456)
 
 ## Guacamole
 The easiest way to install guacamole was to use an [install script](https://github.com/MysticRyuujin/guac-install/). This script sets up a few things:
