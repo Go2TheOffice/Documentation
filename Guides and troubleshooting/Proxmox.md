@@ -13,17 +13,20 @@ I had a lot of trouble using the proxmox installer. After hitting so many issues
 - Only install basic system utils, no GUI, no SSH etc. Proxmox provides it's own version of everything
 - Follow the few steps that the guide tells you to post install
 
-### Troubleshooting
-#### Hard drive doesn't appear in the install menu
+## Troubleshooting
+### Hard drive doesn't appear in the install menu
 This issue happened on a machine with an [Intel Optane](https://store.hp.com/us/en/tech-takes/what-is-intel-optane-memory) chip. I think you might be able to switch back to using it once the OS is installed, but for the installation, debian really doesn't like it. [reference](https://askubuntu.com/questions/99038/why-does-the-ubuntu-installer-not-detect-the-hard-drive-during-installation)
 
-#### vmlinuz-x.x.x-pve has invalid signature/load kernel first
+### vmlinuz-x.x.x-pve has invalid signature/load kernel first
 You didn't disable secure boot dummy. Go to the bios and disable that. [reference](https://forum.proxmox.com/threads/vmlinuz-5-0-21-3-pve-has-invalid-signature.59479/)
 
 **How to fix**
 - Boot into bios menu
 - Find storage/SATA settings
 - Change SATA type to ACHI
+
+### Cannot update because of error: InRelease’ changed its ‘Suite’ value from ‘x’ to ‘x’
+Simply go into the shell and manually run apt update. It'll prompt if apt is allowed to change the repo information, just hit y for all. [Reference](http://kraaima.com/inrelease-changed-its-suite-value-from-testing-to-stable-error/)
 
 ## Maintenance/post install notes
 After install, there may still be some stuff that needs to be fleshed out.
